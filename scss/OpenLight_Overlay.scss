@@ -19,8 +19,8 @@
   */
   
   Gui--OverlayTabWidget {
-    qproperty-effectColor: rgba(33,37,41,96);
-    qproperty-effectBlurRadius: 20.0;
+    qproperty-effectColor: rgba(33,37,41,50);
+    qproperty-effectBlurRadius: 10.0;
     qproperty-effectOffsetX: 0.0;
     qproperty-effectOffsetY: 0.0;
     qproperty-effectWidth: 1;
@@ -70,7 +70,7 @@
 
   QListView::item:hover,
   QTreeView::item:hover  {
-    border: 1px solid $accentBorder;
+    border: 1px solid $contrastBorder;
     background-color: $controlWidgetBackground;
   }
 

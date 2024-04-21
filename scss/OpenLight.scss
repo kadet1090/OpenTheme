@@ -6,45 +6,35 @@
 
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
-    background-color: $secondaryBackground;
+    background-color: white;
     @include softborder;
     &:hover {
-        border-color: $accentBorder;
+        background-color: $primaryBackground;
     }
     &:disabled {
         color: $disabledText;
         border-color: $standardBorder;
     }
     &::up-button {
-        background-color: $controlWidgetBackground;
-        border: 1px solid $contrastBorder;
         &:hover {
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
         }
         &:pressed {
             background-color: $accentBackground;
-            border: 1px solid $accentBackground;
         }
         &:disabled {
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
         }
     }
     &::down-button {
-        background-color: $controlWidgetBackground;
-        border: 1px solid $contrastBorder;
         &:hover {
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
         }
         &:pressed {
             background-color: $accentBackground;
-            border: 1px solid $accentBackground;
         }
         &:disabled {
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
         }
     }
 }
@@ -63,7 +53,7 @@ QCheckBox {
             background-color: $standardBorder;
         }
         &:hover {
-            @include borderhover;
+            border-color: $contrastBorder;
         }
     }
 }
@@ -77,20 +67,8 @@ QComboBox {
         color: $disabledText;
     }
     &:hover {
-        border-color: $accentBorder;
-    }
-    &::drop-down {
-        background-color: $contrastBorder;
-        border: 2px solid transparent;
-        &:disabled {
-            background-color: $standardBorder;
-        }
-        &:hover {
-            background-color: $standardBorder;
-        }
-        &:pressed {
-            background-color: $accentBackground;
-        }
+        border:1px solid $contrastBorder;
+        background-color: $standardBorder;
     }
 }
 
@@ -130,17 +108,15 @@ QLabel {
 }
 
 // normal, disabled, hover, focus
-QLineEdit {
-    background-color: $secondaryBackground;
+QLineEdit, QAbstractSpinBox {
+    background-color: lighten($secondaryBackground, 4%);
     @include softborder;
     &:disabled {
         color: $disabledText;
     }
     &:hover {
-        @include borderhover;
-    }
-    &:focus {
-        @include borderhover;
+        border:1px solid $contrastBorder;
+        background-color: lighten($secondaryBackground, 5%);
     }
 }
 
@@ -198,13 +174,10 @@ QMenu {
         color: $disabledText;
     }
     &::item:selected {
-        //color: $inverseText;
-        @include borderhover;
         background-color: $primaryBackground;
     }
     &::item:pressed {
         color: $inverseText;
-        @include borderhover;
         background-color: $accentBackground;
     }
     &::indicator {
@@ -226,13 +199,11 @@ QMenuBar {
     &::item:pressed {
         color: $inverseText;
         background-color: $accentBackground;
-        @include borderhover;
     }
 
     &::item:selected {
         color: $inverseText;
-        background-color: $accentBackground;
-        @include borderhover;
+        background-color: $accentBorder;
     }
 }
 
@@ -240,11 +211,11 @@ QPushButton {
     border: 1px solid $contrastBorder;
     background-color: $controlWidgetBackground;
     &:hover {
-        border:1px solid $accentBorder;
+        border:1px solid $contrastBorder;
         background-color: $standardBorder;
     }
     &:focus {
-        border:1px solid $accentBorder;
+        border:1px solid $contrastBorder;
         background-color: $standardBorder;
     }
     &:disabled {
@@ -288,7 +259,7 @@ QTabBar {
         border: 1px solid $contrastBorder;
         &:hover {
             background-color: $standardBorder;
-            border: 1px solid $accentBorder;
+            border: 1px solid $contrastBorder;
         }
         &:selected {
             color: $inverseText;
@@ -362,7 +333,7 @@ QToolButton {
      background-color: transparent;
     &:hover {
         background-color: $controlWidgetBackground;
-        border: 1px solid $accentBorder
+        border: 1px solid $contrastBorder;
     }
     &:focus {
         border: 1px solid $accentBorder;

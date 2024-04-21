@@ -1,14 +1,14 @@
 //light color variables
 $primaryText: #212529;
 $inverseText: #000000;
-$primaryBackground: #ced4da;
-$secondaryBackground: #dee2e6;
-$controlWidgetBackground: #adb5bd;
-$accentBackground: #a5d8ff;
-$accentBorder: #339af0;
-$contrastBorder: #868e96;
-$standardBorder: #a3a8ad;
+$primaryBackground: hsl(210, 14%, 93%);
+$secondaryBackground: hsl(210, 14%, 87%);
+$controlWidgetBackground: hsl(210, 11%, 80%);
+$accentBackground: hsl(206, 100%, 87%);
+$accentBorder: hsl(207, 86%, 70%);
+$contrastBorder: hsl(210, 11%, 70%);
+$standardBorder: hsl(210, 11%, 75%);
 $secondaryText: #495057;
 $disabledText: #868e96;
-$selectedElement: #74c0fc;
-$tooltipBackground: #a5d8ff;
+$selectedElement: hsl(206, 96%, 80%);
+$tooltipBackground: hsl(206, 100%, 85%);

@@ -184,6 +184,7 @@ QMenu {
     margin: 0px 10px; }
 
 QMenuBar {
+  padding: 3px 0px;
   spacing: 2px; }
   QMenuBar::item {
     padding: 3px 6px; }
@@ -352,7 +353,6 @@ QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     background-color: transparent; }
     QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
       border: none; }
-
 
 QToolBar > Gui--WorkbenchComboBox QAbstractItemView {
   min-width: 180px; }
