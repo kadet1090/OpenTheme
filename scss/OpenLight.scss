@@ -253,19 +253,17 @@ QSizeGrip {
     background: transparent;
 }
 
-QTabBar {
-    &::tab {
-        background-color: $controlWidgetBackground;
+QTabBar::tab {
+    background-color: $controlWidgetBackground;
+    border: 1px solid $contrastBorder;
+    &:hover {
+        background-color: $standardBorder;
         border: 1px solid $contrastBorder;
-        &:hover {
-            background-color: $standardBorder;
-            border: 1px solid $contrastBorder;
-        }
-        &:selected {
-            color: $inverseText;
-            background-color: $selectedElement;
-            border: 1px solid $accentBorder;
-        }
+    }
+    &:selected {
+        color: $inverseText;
+        background-color: $selectedElement;
+        border: 1px solid $accentBorder;
     }
 }
 
@@ -330,7 +328,7 @@ QToolBarExtension {
 
 QToolButton {
     @include noborder;
-     background-color: transparent;
+    background-color: transparent;
     &:hover {
         background-color: $controlWidgetBackground;
         border: 1px solid $contrastBorder;
@@ -477,7 +475,10 @@ QWidget#Selector > QToolButton {
 QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     selection-background-color: $accentBackground;
 
-    &::item:selected {
-        background-color: $accentBackground;
+    &::item {
+        margin: 3px 0px;
+        border: 1px solid pink;
+        border-radius: 2px;
+        background-color: red;
     }
 }

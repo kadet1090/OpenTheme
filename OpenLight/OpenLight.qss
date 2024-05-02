@@ -269,6 +269,13 @@ QTabBar {
   QTabBar::scroller {
     width: 60px; }
 
+#WbTabBar > QToolButton {
+  margin: 0;
+  padding: 5px 8px;
+  margin-top: 1px;
+  padding-top: 4px;
+  border-radius: 4px; }
+
 QTreeView {
   show-decoration-selected: 0; }
 
@@ -294,11 +301,6 @@ QToolBar {
 
 QToolBarExtension {
   min-width: 16px; }
-
-QToolButton[popupMode="0"], QWidget#Selector > QToolButton[popupMode="0"], QToolButton[popupMode="1"], QWidget#Selector > QToolButton[popupMode="1"], QToolButton[popupMode="2"], QWidget#Selector > QToolButton[popupMode="2"] {
-  /* Only for InstantPopup */
-  padding-right: -20px;
-  margin-right: -20px; }
 
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
@@ -417,8 +419,12 @@ QWidget#Selector {
 SpreadsheetGui--SheetTableView QLineEdit {
   min-width: 186px; }
 
-QTabBar#WbTabBar {
-  qproperty-drawBase: 0; }
+#WbTabBar {
+  spacing: -10px; }
+  #WbTabBar > QTabBar {
+    background-color: transparent;
+    qproperty-drawBase: 0;
+    margin-right: -20px; }
 
 QAbstractSpinBox::up-arrow {
   image: url(qss:images_dark-light/dark_up_arrow.svg); }
@@ -475,6 +481,8 @@ QTabBar::close-button {
   background-image: url(qss:images_dark-light/close_dark.svg); }
 
 QTreeView::branch:has-siblings:!adjoins-item {
+  background-color: none;
+  border: none;
   border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0; }
 
 QTreeView::branch:has-siblings:adjoins-item {
@@ -897,5 +905,8 @@ QWidget#Selector > QToolButton {
 
 QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
   selection-background-color: #bde2ff; }
-  QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
-    background-color: #bde2ff; }
+  QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item {
+    margin: 3px 0px;
+    border: 1px solid pink;
+    border-radius: 2px;
+    background-color: red; }

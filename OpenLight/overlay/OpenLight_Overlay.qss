@@ -51,19 +51,22 @@ QListView {
 QListView::item,
 QTreeView::item {
   margin: 3px 0px;
+  border: 1px solid transparent; }
+
+QTreeView::item, QTreeView::item:selected, QTreeView::item:hover {
+  background: none;
+  border: none; }
+
+#DocumentTreeItems::item {
   border: 1px solid transparent;
   border-radius: 2px;
-  background-color: #d9dee2; }
-
-QListView::item:hover,
-QTreeView::item:hover {
-  border: 1px solid #aab3bb;
-  background-color: #c6ccd2; }
-
-QListView::item:selected,
-QTreeView::item:selected {
-  border: 1px solid #71b9f4;
-  background-color: #bde2ff; }
+  background-color: #ebedf0; }
+  #DocumentTreeItems::item:hover {
+    border: 1px solid #aab3bb;
+    background-color: #c6ccd2; }
+  #DocumentTreeItems::item:selected {
+    border: 1px solid #71b9f4;
+    background-color: #bde2ff; }
 
 Gui--PropertyEditor--PropertyEditor {
   qproperty-groupTextColor: #212529;

@@ -603,8 +603,8 @@ QToolBar {
 }
 
 QToolBarExtension {
-    border: 1px solid transparent;
-    min-width: 16px;
+    // border: 1px solid transparent;
+    // min-width: 16px;
     background-color: transparent;
     qproperty-icon: url(qss:images_dark-light/light_expand.svg);
 }

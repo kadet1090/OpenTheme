@@ -309,6 +309,14 @@ QTabBar {
     }
 }
 
+#WbTabBar > QToolButton {
+    margin: 0;
+    padding: 5px 8px;
+    margin-top: 1px;
+    padding-top: 4px;
+    border-radius: 4px;
+}
+
 QTree {
     QListView {
         @extend QList;
@@ -353,12 +361,6 @@ QToolBar {
 
 QToolBarExtension {
     min-width: 16px;
-}
-
-QToolButton[popupMode="0"], QToolButton[popupMode="1"], QToolButton[popupMode="2"] {
-    /* Only for InstantPopup */
-    padding-right: -20px;
-    margin-right: -20px;
 }
 
 QToolButton {
@@ -520,6 +522,12 @@ SpreadsheetGui--SheetTableView QLineEdit {
     min-width: 186px;
 }
 
-QTabBar#WbTabBar {
-    qproperty-drawBase: 0;
+#WbTabBar {
+    spacing: -10px;
+
+    > QTabBar {
+        background-color: transparent;
+        qproperty-drawBase: 0;
+        margin-right: -20px;
+    }
 }

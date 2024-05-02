@@ -116,6 +116,8 @@ QTreeView{
 }
 
 QTreeView::branch:has-siblings:!adjoins-item  {
+    background-color: none;
+    border: none;
     border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0;
 }
 
