@@ -475,10 +475,7 @@ QWidget#Selector > QToolButton {
 QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     selection-background-color: $accentBackground;
 
-    &::item {
-        margin: 3px 0px;
-        border: 1px solid pink;
-        border-radius: 2px;
-        background-color: red;
+    &::item:selected {
+        background-color: $accentBackground;
     }
 }
